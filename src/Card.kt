@@ -6,7 +6,7 @@ const val heart = "Heart"
 
 val reds = arrayOf(diamond,heart)
 val blacks = arrayOf(club,spade)
-class Card(val value:Int, val suit: String, var faceUp:Boolean = false) {}
+data class Card(val value:Int, val suit: String, var faceUp:Boolean = false) {}
 
 //  can also be: 
 //  /* class Card( value:Int, suit:String,faceUp:Boolean) {

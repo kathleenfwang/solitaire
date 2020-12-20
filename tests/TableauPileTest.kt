@@ -17,5 +17,12 @@ class TableauPileTest {
 
     @Test
     fun removeCards() {
+        // arrange
+        val tableauPile = TableauPile(mutableListOf(Card(4,spade), Card(3,heart), Card(2,club)))
+        // action
+        // want to remove at tapped index 1
+        tableauPile.removeCards(1)
+        //assert
+        assertEquals(mutableListOf(Card(4,spade,true)), tableauPile.cards)
     }
 }

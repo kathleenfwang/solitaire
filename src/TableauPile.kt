@@ -26,8 +26,8 @@ class TableauPile(var cards: MutableList<Card> = mutableListOf()) {
         // remove all the cards from current tableau that are faceup from tappedIndex 
         // start from tapped index -> 0 
         // only cards with faceUp can be tapped
-            for (i in tappedIndex downTo 0 ){
-            cards.removeAt(i)
+            for (i in tappedIndex..cards.lastIndex ){
+            cards.removeAt(tappedIndex)
         } 
          // now have to set the last card in cards to be true if it has a card left 
          if (cards.size > 0) {
