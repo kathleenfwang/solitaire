@@ -30,10 +30,7 @@ class GameModel {
         if (wastePile.size > 0) {
             // check if we can use the last added card
             val card = wastePile.last()
-            if (playWasteCard(card)) {
-                // remove from waste
-                wastePile.remove(card)
-            }
+            if (playWasteCard(card)) wastePile.remove(card)
         }
     }
     fun onFoundationPileTap(ind:Int) {
@@ -41,10 +38,7 @@ class GameModel {
         if (foundationPile.cards.size > 0) {
             // check if we can use the last added card
             val card = foundationPile.cards.last()
-            if (playWasteCard(card,"foundation")) {
-                // remove from foundation pile
-                foundationPile.removeCard(card)
-            }
+            if (playWasteCard(card,"foundation")) foundationPile.removeCard(card)
         }
     }
     private fun playWasteCard(card: Card, origin: String = "waste"): Boolean {
@@ -65,6 +59,4 @@ class GameModel {
         }
         return false
     }
-
-
 }

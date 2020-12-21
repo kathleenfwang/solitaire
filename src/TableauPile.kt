@@ -9,10 +9,7 @@ class TableauPile(var cards: MutableList<Card> = mutableListOf()) {
     fun addCards(newCards:MutableList<Card>):Boolean {
         if (cards.size > 0) {
         val prev = cards.last()
-        if (newCards.first().value < prev.value && checkSuit(newCards.first())) {
-            // add newCards to cards 
-            cards.addAll(newCards)
-        }
+        if (newCards.first().value < prev.value && checkSuit(newCards.first())) cards.addAll(newCards)
         return true 
         } 
         // else if the pile is empty, and if the new card's first item is king, we can all cards
@@ -30,10 +27,7 @@ class TableauPile(var cards: MutableList<Card> = mutableListOf()) {
             cards.removeAt(tappedIndex)
         } 
          // now have to set the last card in cards to be true if it has a card left 
-         if (cards.size > 0) {
-             cards.last().faceUp = true 
-    
-        }
+         if (cards.size > 0) cards.last().faceUp = true
     }
     private fun checkSuit(newCard: Card) : Boolean {
         val newCardSuit = newCard.suit

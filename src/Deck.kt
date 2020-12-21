@@ -19,7 +19,6 @@ class Deck {
             1 -> diamond
             2 -> heart
             else -> spade
-
         }
     }
 }

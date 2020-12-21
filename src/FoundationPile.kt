@@ -11,9 +11,8 @@ class FoundationPile(val suit:String) {
         // card has to be the same suit as suit 
         // card has to be one less than prev card value 
         var prev = 0
-        if (cards.size > 1) {
-            prev = cards.last().value + 1 
-        }
+        if (cards.size > 1) prev = cards.last().value + 1
+
         if (card.value == prev && card.suit == suit) {
             cards.add(card)
             return true
