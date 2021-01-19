@@ -65,4 +65,8 @@ object GameModel {
             tableauPiles.forEach { if (it.addCards(mutableListOf(card))) return true }
         return false
     }
+
+    fun debugPrint() {
+        println(deck.cardsInDeck.last())
+    }
 }
